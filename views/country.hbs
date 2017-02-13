@@ -1,0 +1,65 @@
+
+<div class="ui padded basic segment">
+
+    <div class="ui top attached message">
+        <h2 class="ui header">
+            <i class="item icon"></i>
+            <div class="content">
+                Country
+            </div>
+        </h2>
+
+        {{#if countries}}
+        CHANGE TO REGION/CONTINENT SUCH AS ASIA,ERUOPE, AMERICA
+            <p> 
+                <label>Country:</label>
+                <select id = "id" onchange="show()">
+                <option value=""></option>
+                {{#each countries}}
+                <option value="">{{this.countryName}}</option>
+                {{/each}}
+                </select>
+            </p>
+        {{/if}}
+    </div>
+
+    <div class="ui stacked padded attached compact segment">
+        {{#if countries}}
+            <div class="ui middle aligned divided very relaxed selection link list">
+                <div class="ui two column grid">
+                {{#each countries}}
+                    {{#travelerIn this/travelers }}
+                        <div class="column" href="">
+                            <a class="ui fluid card" href="/browse/country/with/{{ this.countryName }}">
+                        	    <img src="/img/countryPhotos/{{ this.countryName }}.jpg">
+                    		    <h2 class="ui icon header">
+                    			    <div class="content">
+                    				    <div class="ui center aligned">
+                    					    {{this.countryName}} 
+                                            <p></p>
+                                            <h4>Number of travelers in this country : {{this.travelers}}</h4>
+                    				    </div>
+                    				</div>
+                    			</h2>
+                        	</a>
+                        </div>
+                    {{/travelerIn}}
+                {{/each}}
+
+                </div>
+            </div>
+        {{else}}
+            <p>Tidak ada item di negara yang anda cari.</p>
+        {{/if}}
+    </div>
+</div>
+
+
+<script>
+ function show() {
+        var e = document.getElementById('id');
+        var txt = e.options[e.selectedIndex].text;
+        window.location = '/browse/country/with/' + txt;
+        console.log(txt)
+    }
+</script>

@@ -1,0 +1,97 @@
+<div class="ui vertical stripe segment">
+	
+		<form action="" method="post">
+
+			<div class="ui stackable divided inverted grid container">
+				
+				<div class="twelve wide column">
+
+                    <div class="content">
+                        <div class="ui ignored warning message">
+                            <p>Please make sure that you complie with the Rules and Regulations from us and with the visited Country's law and with Indoensia's law.<p>
+                            <p>Please ensure that you can bring the amount and size of the item you specified. Failure to bring the item/break any of the aformentioned rule, will be your responsibility </p>
+                            <p>To make sure that you complie with our Rules, check out <a href="/behaviors/form.html">Terms and Condition</a>.</p>
+                        </div>
+                    </div>
+
+                    <table class="ui celled striped table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Request Confirmation </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="collapsing">Item Name</td>
+                                <td>{{itemName}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="collapsing">Quantity</td>
+                                <td>{{quantity}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="collapsing">URL Item</td>
+                                <td><a>{{URLItem}}</a></td>
+                            </tr>
+
+                            <tr>
+                                <td class="collapsing">Item Description</td>
+                                <td>{{itemDescription}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="collapsing">Category</td>
+                                {{#if categories}}
+                                    {{#each categories}}
+                                        <td>{{this.categoryName}}</td>
+                                    {{/each}}
+                                {{/if}}
+                            </tr>
+
+                            <tr>
+                                <td class="collapsing">Country</td>
+                                {{#if countries}}
+                                    {{#each countries}}
+                                        <td>{{this.countryName}}</td>
+                                    {{/each}}
+                                {{/if}}
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                           
+                            <input name="tc" type="checkbox" value="true">
+                            <label>I agree to the <a>Terms and Conditions</a></label>
+                        </div>
+                    </div>
+
+                     <p></p>
+
+                    <button class="ui yellow button">Request</button>
+
+                </div>
+
+                <div class="column four wide">
+                    <h1>Requestor</h1>
+                	<div class="ui cards">
+                	    <div class="card">
+                		    <img src="/img/avatar/face.jpg">
+                		    <div class="content">
+                			    <h2>{{user.name}}</h2>
+                				Deal Rate<div class="ui star rating" data-rating="5"></div><p></p>
+                				Delivered Time<div class="ui star rating" data-rating="5"></div><p></p>
+                				Delivered Item Quality<div class="ui star rating" data-rating="5"></div><p></p>
+                			</div>
+                		</div>
+                	</div>
+                </div>
+            </div>
+
+        </form>
+
+</div>

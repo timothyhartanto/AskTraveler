@@ -1,0 +1,17 @@
+<div class="column">
+    <div class="ui message">
+        <i class="close icon"></i>
+        <h2 class="ui center aligned icon header">
+          <i class="{{ pesan.icon }} icon"></i>
+          <div class="content">
+            {{ pesan.judul }}
+            <div class="sub header">{{ pesan.deskripsi }}</div>
+          </div>
+        </h2>
+        {{#if pesan.tambahan}}
+        <div class="ui compact small message">
+            {{ pesan.tambahan }}
+        </div>
+        {{/if}}
+    </div>
+</div>

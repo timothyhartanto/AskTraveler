@@ -1,0 +1,92 @@
+<div class="ui vertical stripe segment">
+	<div class="ui text container">
+		<form action="" method="post">
+
+			{{#if errorMessage}}
+			<div class="ui red message">
+				<i class="warning icon"></i>
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if okMessage}}
+				<div class="ui verify green message">{{okMessage}}</div>
+			{{/if}}
+
+			<div class="content">
+				<div class="field required">	
+					<label>Email Address</label>
+					<div class="ui fluid input">
+						<input type="text" name="email" placeholder="Email Address">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<div class="content">
+				<div class="field required">	
+					<label>Password</label>
+					<div class="ui fluid input">
+							<input type="password" name="password" placeholder="Password">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<div class="content">
+				<div class="field required">	
+					<label>Repeat Password</label>
+					<div class="ui fluid input">
+							<input type="password" name="repeatPassword" placeholder="Repeat Password">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<div class="content">
+				<div class="field required">	
+					<label>First Name</label>
+					<div class="ui fluid input">
+						<input type="text" name="firstName" placeholder="First Name">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<div class="content">
+				<div class="field required">	
+					<label>Last Name</label>
+					<div class="ui fluid input">
+						<input type="text" name="lastName" placeholder="Last Name">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<div class="content">
+				<div class="field required">	
+					<label>Phone Number</label>
+					<div class="ui fluid input">
+						<input type="text" name="phoneNumber" placeholder="Phone Number">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<button class="ui yellow button">Register</button>
+
+			<div class="ui horizontal divider">
+	        	OR
+	        </div>
+
+	        Already have an account? Please <a href="/login" class="item">Login here!</a> 
+        </form>
+	</div>
+</div>
+

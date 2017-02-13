@@ -1,0 +1,54 @@
+<div class="ui vertical stripe segment">
+	<div class="ui text container">
+		<form action="" method="post">
+
+			{{#if errorMessage}}
+				<div class="ui red message">
+					<i class="warning icon"></i>
+					{{errorMessage}}
+				</div>
+			{{/if}}
+
+			{{#if okMessage}}
+				<div class="ui green message">{{okMessage}}</div>
+			{{/if}}
+
+			<div class="content">
+				<div class="field required">	
+					<label>Email Address</label>
+					<div class="ui fluid input">
+						<input type="text" name="email" placeholder="Email Address">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<div class="content">
+				<div class="field required">	
+					<label>Password</label>
+					<div class="ui fluid input">
+							<input type="password" name="password" placeholder="Password">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<button class="ui yellow button">Login</button>
+
+			<div class="ui horizontal divider">
+	        	OR
+	        </div>
+
+	        {{#if verifyMessage}}
+	        The verification email is not received? <a href="/login" class="item">Resend the verification email</a>! 
+	        {{else}}
+	        First time here? Please <a href="/register" class="item">Register</a>! 
+	        {{/if}}
+	        <p></p>
+	        Forget your password? <a href="/forgotpass" class="item">Reset Your Password!</a>
+	        
+        </form>
+	</div>
+</div>

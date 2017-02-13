@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('a.sidebar').click(function (e) {
+            $('.ui.sidebar').sidebar('toggle');
+            e.preventDefault();
+        });
+        $('.popup').popup();
+        $('.ui.form').form();
+        $('.ui.dropdown').dropdown();
+    });
+</script>

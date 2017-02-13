@@ -1,0 +1,31 @@
+<div class="ui vertical stripe segment">
+	<div class="ui text container">
+		<form action="" method="post">
+
+			{{#if message}}
+				<div class="ui red message">
+					<i class="warning icon"></i>
+					{{message}}
+				</div>
+			{{/if}}
+
+			{{#if verifyMessage}}
+				<div class="ui verify green message">{{verifyMessage}}</div>
+			{{/if}}
+
+			<div class="content">
+				<div class="field required">	
+					<label>Email Address</label>
+					<div class="ui fluid input">
+						<input type="text" name="email" placeholder="Email Address">
+					</div>
+				</div>
+			</div>	
+
+			<p></p>
+
+			<button class="ui yellow button">Reset Password</button>
+	        
+        </form>
+	</div>
+</div>

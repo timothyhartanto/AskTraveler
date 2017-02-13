@@ -1,0 +1,70 @@
+
+<div class="ui padded basic segment">
+
+    <div class="ui top attached message">
+    <h2 class="ui header">
+        <i class="item icon"></i>
+        <div class="content">
+            Categories
+            <div class="sub header">Item</div>
+        </div>
+
+
+    </h2>
+
+{{#if categories}}
+<p>
+  <label>Category:</label>
+  <select id = "id" onchange="show()">
+    <option value=""></option>
+  {{#each categories}}
+    <option value="">{{this.categoryName}}</option>
+  {{/each}}
+  </select>
+
+</p>
+{{/if}}
+
+    <div class="ui stacked padded attached compact segment">
+        {{#if items}}
+            <div class="ui middle aligned divided very relaxed selection link list">
+
+                <div class="ui three column grid">
+                {{#each items}}
+
+                <div class="column" href="">
+                    <a class="ui fluid card" href="/index">
+                	    <img src="/img/itemPhotos/{{ this.id }}.jpg">
+                		    <h2 class="ui icon header">
+                			    <div class="content">
+                				    <div class="ui center aligned">
+                					    {{this.itemName}}
+                					    <div class="sub header">
+                					        <p>{{this.description}}</p>
+                						        Earliest return date: 05-04-2016
+                					    </div>
+                				    </div>
+                				</div>
+                			</h2>
+                	</a>
+                </div>
+
+                {{/each}}
+                </div>
+            </div>
+        {{else}}
+            <p>Tidak ada kategori yang anda cari.</p>
+        {{/if}}
+    </div>
+</div>
+
+
+<script>
+ function show() {
+        var e = document.getElementById('id');
+        var txt = e.options[e.selectedIndex].text;
+        window.location = '/browse/category/with/' + txt;
+        console.log(txt)
+
+    }
+</script>

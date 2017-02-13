@@ -1,0 +1,193 @@
+<div class="ui vertical stripe segment">
+		<form action="" method="post">
+
+			<div class="ui stackable divided inverted grid container">
+				
+
+				<div class="twelve wide column">
+                    <div class="content">
+
+                        {{#if okMessage}}
+                            <div class="ui green message">{{okMessage}}</div>
+                        {{/if}}
+
+                        <div class="ui form">
+                            <div class="required field">
+                                {{#if itemName}}
+                                    <div class="field error">
+                                        <label>Item Name</label>                                
+                                        <div class="ui fluid input">
+                                            <input type="text" name="itemName" placeholder="Put your Item Name here">
+                                        </div>
+                                    </div>
+                                {{else}}
+                                    <label>Item Name</label>                                
+                                    <div class="ui fluid input">
+                                        <input type="text" name="itemName" placeholder="Put your Item Name here">
+                                    </div>
+                                {{/if}}
+
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+
+                    <div class="content">
+                        <div class="ui form">
+                            <div class="field required">
+                                {{#if quantity}}
+                                    <div class="field error">
+                                        <label>Quantity you are willing to buy</label>
+                                        <div class="ui fluid input">
+                                            <input type="text" name="quantity" placeholder="I can buy 2 of those.">
+                                        </div>
+                                    </div>
+                                {{else}}
+                                    <label>Quantity you are willing to buy</label>
+                                    <div class="ui fluid input">
+                                        <input type="text" name="quantity" placeholder="I can buy 2 of those.">
+                                    </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="content">
+                        <div class="ui form">
+                            <label>URL Item</label>
+                            <div class="ui fluid input">
+                                <input type="text" name="URLItem" placeholder="URL that describe this product">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="content">
+                        <div class="ui form">
+                            <div class="field required">
+                                {{#if itemDescription}}
+                                    <div class="field error">
+                                        <label>Item Description</label>
+                                        <div class="ui fluid input">
+                                            <input type="form" name="itemDescription" placeholder="Description of this product">
+                                        </div>
+                                    </div>
+                                {{else}}
+                                    <label>Item Description</label>
+                                    <div class="ui fluid input">
+                                        <input type="form" name="itemDescription" placeholder="Description of this product">
+                                    </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="content">
+                        <div class="ui form">
+                            <div class="field required">
+                                {{#if categoryId}}
+                                    <div class="field error">
+                                        <label>Category</label>
+                                        <div class="ui fluid input">
+
+                                            {{#if categories}}
+                                                 <select class="ui fluid dropdown" name="category" id="category">
+                                                    <option value="">Category</option>
+                                                    {{#each categories}}
+                                                    <option value={{this.id}}>{{this.categoryName}}</option>
+                                                    {{/each}}
+                                                </select>   
+                                
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                                {{else}}
+                                    <label>Category</label>
+                                    <div class="ui fluid input">
+
+                                        {{#if categories}}
+                                             <select class="ui fluid dropdown" name="category" id="category">
+                                                <option value="">Category</option>
+                                                {{#each categories}}
+                                                <option value={{this.id}}>{{this.categoryName}}</option>
+                                                {{/each}}
+                                            </select>   
+                            
+                                        {{/if}}
+
+                                    </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <p></p>
+
+                    <div class="content">
+                        <div class="ui form">
+                            <div class="field required">
+                                {{#if countryId}}
+                                    <div class="field error">
+                                        <label>Country</label>
+                                        <div class="ui fluid input">
+                           
+                                            {{#if countries}}                                    
+                                                <select class="ui fluid dropdown" name="country" id="country">
+                                                    <option value="">Country</option>
+                                                    {{#each countries}}
+                                                    <option value={{this.id}}>{{this.countryName}}</option>
+                                                    {{/each}}
+                                                </select>                     
+                                            {{/if}}
+                             
+                                        </div>
+                                    </div>
+                                {{else}}
+                                    <label>Country</label>
+                                        <div class="ui fluid input">
+                           
+                                            {{#if countries}}                                    
+                                                <select class="ui fluid dropdown" name="country" id="country">
+                                                    <option value="">Country</option>
+                                                    {{#each countries}}
+                                                    <option value={{this.id}}>{{this.countryName}}</option>
+                                                    {{/each}}
+                                                </select>                     
+                                            {{/if}}
+                             
+                                        </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+
+                     <p></p>
+
+                    <button class="ui yellow button">Request</button>
+
+                </div>
+
+                <div class="column four wide">
+                    <h1>Requestor</h1>
+                	<div class="ui cards">
+                	    <div class="card">
+                		    <img src="/img/avatar/face.jpg">
+                		    <div class="content">
+                			    <h2>{{user.name}}</h2>
+                				Deal Rate<div class="ui star rating" data-rating="5"></div><p></p>
+                				Delivered Time<div class="ui star rating" data-rating="5"></div><p></p>
+                				Delivered Item Quality<div class="ui star rating" data-rating="5"></div><p></p>
+                			</div>
+                		</div>
+                	</div>
+                </div>
+            </div>
+
+        </form>
+
+</div>

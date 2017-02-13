@@ -1,0 +1,82 @@
+<div class="ui padded basic segment">
+    <div class="ui top attached message">
+      <h2 class="ui header">
+        <i class="mail icon"></i>
+        <div class="content">
+            Messages
+            <div class="sub header">With user: Traveler Ceria</div>
+        </div>
+      </h2>
+    </div>
+    <div class="ui stacked padded attached compact segment">
+        <table class="ui very basic unstackable table">
+            <tr>
+                <a class="ui label" href="/messages"><i class="chevron circle left icon"></i>Back to Inbox</a>
+            </tr>
+            <tr>
+                <td class="three wide">
+					<div class="ui center aligned basic segment">
+						<a class="ui red header" href="/user/traveler123" target="_blank">
+							<img class="ui circular tiny image" src="/img/avatar/demo.jpg"/>
+							<div class="ui horizontal divider">Traveler Ceria</div>
+						</a>
+					</div>
+				</td>
+                <td class="thirteen wide">
+					<p><small>7 Jan 2016</small></p><p>Hallooooo</p>
+					<p class="ui labels">
+						{{#if this.isRead}}
+						<div class="ui small label">Status: Read</div>
+						{{else}}
+						<a class="ui small green label ajax" data-url="/messages/read"><i class="check icon"></i>Mark as Read</a>
+						{{/if}}
+						<a class="ui small blue label reply-btn"><i class="reply icon"></i>Reply</a>
+					</p>
+				</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="ui small modal compose">
+    <i class="close icon"></i>
+    <div class="header">
+      <i class="user icon"></i> Traveler123
+    </div>
+    <div class="image content">
+      <div class="ui small bordered rounded image">
+          <img src="/img/avatar/demo.jpg"/>
+      </div>
+      <div class="description">
+        <form method="POST" enctype="multipart/form-data" class="ui fluid form">
+            <div class="field required">
+                <label>Message</label>
+                <div class="ui input">
+                  <textarea name="desc" placeholder="Write here..."></textarea>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui red small button"><i class="trash icon"></i>Discard</div>
+      <div class="ui green small button"><i class="send icon"></i>Send</div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function () {
+	$('a.ajax').click(function (e) {
+		var $a = $(this);
+		//$.post($a.data('url'), function (data) {
+			//if (data) {
+				$a.text('Status: Read').removeClass('green');
+			//}
+		//});
+		e.preventDefault();
+	});
+    $('.ui.reply-btn').click(function () {
+        $('.ui.modal.compose').modal('show');
+    });
+})
+</script>

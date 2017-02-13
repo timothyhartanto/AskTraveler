@@ -1,0 +1,64 @@
+body {
+    background-image: url('../img/itemPhotos/gbr1.png');
+}
+
+.ui.main.container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.ui.sidebar.menu {
+    padding-top: 5em;
+}
+
+.ui.segment.footer {
+    padding: 4em 0;
+}
+
+.masthead.segment {
+    min-height: 600px;
+    padding: 1em 0em;
+}
+.masthead h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0;
+    font-size: 4em;
+}
+.masthead h2 {
+    margin-top: 0;
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+.ui.vertical.stripe {
+    padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+    font-size: 2em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+    margin-top: 3em;
+}
+
+.quote.stripe.segment {
+    padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.features p {
+    text-align: justify;
+}
+    
+#left,
+#right {
+    min-height:100px;
+}
+
+#left > div,
+#right > div {
+    cursor: grab;
+}

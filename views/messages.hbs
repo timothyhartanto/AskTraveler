@@ -1,0 +1,35 @@
+<div class="ui padded basic segment">
+    <div class="ui top attached message">
+      <h2 class="ui header">
+        <i class="mail icon"></i>
+        <div class="content">
+            Messages
+            <div class="sub header">Inbox</div>
+        </div>
+      </h2>
+    </div>
+    <div class="ui stacked padded attached compact segment">
+        {{#if msgs}}
+          <div class="ui middle aligned divided very relaxed selection link list">
+            <!--a class="item" href="/messages/with/{{ this.from.id }}">
+              <img class="ui avatar image" src="/img/avatar/{{ this.from.user }}.jpg">
+              <div class="content">
+                <div class="header">{{ this.from.name }}</div>
+                <small>{{ this.pesan }}</small>
+              </div>
+            </a-->
+              {{#each msgs}}
+                <a class="item" href="/messages/with/{{ this.idUserFrom }}">
+                  <img class="ui avatar image" src="/img/avatar/demo.jpg">
+                  <div class="content">
+                    <div class="header">{{ this.firstName }}</div>
+                    <small><strong><em>{{ this.tglFormat }}</em></strong>:</small> <small>{{ this.message }}</small>
+                  </div>
+                </a>
+              {{/each}}
+          </div>
+        {{else}}
+          <p>Anda belum mendapatkan pesan.</p>
+        {{/if}}
+    </div>
+</div>

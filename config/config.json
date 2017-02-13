@@ -1,0 +1,36 @@
+{
+    "development": {
+        "username": "root",
+        "password": "password123",
+		"port": "3308",
+        "database": "asktraveler",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "define": {
+            "freezeTableName": true,
+            "timestamps": false
+        }
+    },
+    "test": {
+        "username": "root",
+        "password": "password123",
+        "database": "asktraveler",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "define": {
+            "freezeTableName": true,
+            "timestamps": false
+        }
+    },
+    "production": {
+        "username": "root",
+        "password": "password123",
+        "database": "asktraveler",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "define": {
+            "freezeTableName": true,
+            "timestamps": false
+        }
+    }
+}
