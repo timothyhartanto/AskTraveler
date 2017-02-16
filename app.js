@@ -146,14 +146,13 @@ app.use('/requestConfirmation', requestConfirmation);
 app.use('/messages', messages);
 //app.use('/settings', reqAuth, settings);
 
-/*
+
 app.get('/login', function(req, res, next) {
     req.session.user = {
         id: 1
     };
     res.redirect('/messages');
 });
-*/
 
 app.get('/logout', function(req, res, next) {
     req.session.destroy();
