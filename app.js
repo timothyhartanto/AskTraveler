@@ -10,7 +10,7 @@
  * requires *
  **************/
 
-// libraries
+// libs
 var express = require('express'),
     exphbs = require('express-handlebars'),
     session = require('express-session'),
