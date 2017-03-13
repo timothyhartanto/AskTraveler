@@ -54,7 +54,7 @@ var app = express();
  **************/
 
 var reqAuth = function(req, res, next) {
-    /)next();
+    //)next();
     //console.log('test');
     // console.log(req.session.passport.user);
     // console.log('test2');
